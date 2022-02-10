@@ -7,17 +7,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main class="w-3/4 mx-auto">
-        <h1 class="text-5xl font-semibold text-center mt-16">
-            Welcome to <span class="text-orange-300">Bap-er-Bank !!!</span>
+    <main class="w-full md:w-3/4 lg:w-2/4 mx-auto">
+        <h1 class="text-4xl w-3/4 mx-auto md:w-full md:text-5xl font-semibold text-center mt-8 md:mt-16">
+            Welcome to <span class="text-orange-300">Baper Bank !!!</span>
         </h1>
-        <section id="user-login-section" class="mt-16 p-8 rounded-lg bg-green-200">
-            <div class="user-login">
-                <h3 class="text-2xl mb-4 font-medium text-orange-300">User Login</h3>
+        <section id="user-login-section" class="drop-shadow mx-6 md:mx-0 mt-8 md:mt-16 py-8 md:p-16 rounded md:rounded-3xl bg-green-100">
+            <div class="user-login w-4/5 mx-auto">
+                <h3 class="text-2xl mb-4 font-semibold">User Login</h3>
                 <div class="">
-                    <input id="input-email" class="border block border-gray-400 px-2 py-1 mb-4 rounded w-3/4" placeholder="Enter your email" type="text">
-                    <input id="input-password" class="border block border-gray-400 px-2 py-1 mb-4 rounded w-3/4" placeholder="Enter your password" type="password">
-                    <button id="btn-login" class="text-white px-6 py-1 bg-yellow-300 rounded font-medium">Login</button>
+                    <p class="text-red-400" id="invalid-email-message"></p>
+                    <input id="input-email" class="drop-shadow block outline-none  px-2 py-2 mb-4 rounded w-full" placeholder="Email: 'info@bc.com'" type="email">
+                    <p class="text-red-400" id="invalid-password-message"></p>
+                    <input id="input-password" class="drop-shadow block outline-none px-2 py-2 mb-4 rounded w-full" placeholder="Password: 'infobc'" type="password">
+                    <button id="btn-login" class="drop-shadow text-white px-6 py-2 bg-yellow-400 rounded font-medium">Login</button> 
+                    <span id="login-message" class="text-red-400 font-medium pl-2"></span>
                 </div>
             </div>
         </section>
