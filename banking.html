@@ -7,10 +7,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main class="w-3/4 mx-auto">
-        <h1 class="text-5xl font-semibold text-center mt-16">
-            Let's get some <span class="text-orange-300">Mooooooney !!!</span>
+    <main class="w-full md:w-3/4 mx-auto">
+        <h1 class="text-4xl mb-16 w-3/4 mx-auto md:w-full md:text-5xl font-semibold text-center mt-8 md:mt-16">
+            Let's get some <span class="text-orange-300">Mooooney !!!</span>
         </h1>
+        <section id="banking-section">
+            <div class="grid gap-4 grid-cols-3 text-white mb-8">
+                <div class="bg-green-400 p-8 rounded-lg">
+                    <h3 class="text-3xl mb-2">Balance</h3>
+                    <h1 class="text-5xl">$<span id="balance-field">1024</span></h1>
+                </div>
+                <div class="bg-violet-400 p-8 rounded-lg">
+                    <h3 class="text-3xl mb-2">Deposit</h3>
+                    <h1 class="text-5xl">$<span id="deposit-field">00</span></h1>
+                </div>
+                <div class="bg-orange-400 p-8 rounded-lg">
+                    <h3 class="text-3xl mb-2">Withdraw</h3>
+                    <h1 class="text-5xl">$<span id="withdraw-field">00</span></h1>
+                </div>
+            </div>
+            <div class="grid gap-8 grid-cols-2">
+                <div class="bg-pink-300 p-8 rounded-lg">
+                    <h3 class="text-3xl mb-3 text-white">Please Deposit</h3>
+                    <input id="deposit-input" class="mb-3 drop-shadow w-full outline-none border-0 px-2 py-2 rounded" placeholder="Please enter your amount" type="text">
+                    <button id="deposit-btn" class="drop-shadow text-white px-6 py-2 bg-yellow-400 rounded font-medium">Deposit</button>
+                </div>
+                <div class="bg-pink-300 p-8 rounded-lg">
+                    <h3 class="text-3xl mb-3 text-white">Please Withdraw</h3>
+                    <input id="withdraw-input" class="mb-3 drop-shadow w-full outline-none border-0 px-2 py-2 rounded" placeholder="Please enter your amount" type="text">
+                    <button id="withdraw-btn" class="drop-shadow text-white px-6 py-2 bg-yellow-400 rounded font-medium">Withdraw</button>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="js/banking.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ loginButton.onclick = () => {
             window.location.href = 'banking.html';
         }
         else {
-            loginStatus.innerText = 'Email or Password incorrect';
+            loginStatus.innerText = 'Incorect ! try again';
             inputEmailField.style.border = '1px solid red';
             inputPasswordField.style.border = '1px solid red';
         }
