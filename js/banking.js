@@ -15,18 +15,18 @@ const update = (fieldId, value) => document.getElementById(fieldId).innerText = 
 const updateFieldValue = (inputAmount, isWithdraw) => {
     const balance = getValue('balance-field', false);
     if(isWithdraw == true){
-        const prevWdroAmount = getValue('withdraw-field', false);
         if(inputAmount > 0 && inputAmount < balance ) {
+            const prevWdroAmount = getValue('withdraw-field', false);
             update('balance-field', balance - inputAmount);
             update('withdraw-field', prevWdroAmount + inputAmount);
-        }
+        } else alert('Withdraw Failed')
     } 
     else {
-        const prevDepoAmount = getValue('deposit-field', false);
         if(inputAmount > 0) {
+            const prevDepoAmount = getValue('deposit-field', false);
             update('balance-field', balance + inputAmount);
             update('deposit-field', prevDepoAmount + inputAmount);
-        }
+        } else alert('Deposit Failed')
     }
 }
 
